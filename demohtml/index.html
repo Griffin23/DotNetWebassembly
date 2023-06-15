@@ -1,0 +1,19 @@
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+    </head>
+    <body></body>
+    <script src="_framework/blazor.webassembly.js" autostart="false"></script>
+    <script>
+        window.onload = async function () {
+            await Blazor.start();
+            const r = await DotNet.invokeMethodAsync(
+                'DotNetWebassembly', //程序集的名字
+                'Add', //要调用的标注了[JSInvokable]方法的名字
+                666, //若干参数
+                333
+            );
+            alert(r);
+        };
+    </script>
+</html>

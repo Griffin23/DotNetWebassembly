@@ -1,6 +1,6 @@
 using Microsoft.JSInterop;
 
-namespace Demo1
+namespace DotNetWebassembly
 {
     public class Program
     {
